@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TallerDDP
 {
-    public class CuentaAhorro : Cuenta, IServicios
+    public class CuentaAhorro : Cuenta, IServiciosFinancieros
     {
         private bool primeraConsignacion;
 

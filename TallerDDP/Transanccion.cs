@@ -4,12 +4,12 @@ using System.Text;
 
 namespace TallerDDP
 {
-    public class Transancion
+    public class Transanccion
     {
         protected double monto { get; set; } 
         protected DateTime fecha { get; set; }
 
-        public Transancion(double monto)
+        public Transanccion(double monto)
         {
             this.monto = monto;
             this.fecha = DateTime.Now;

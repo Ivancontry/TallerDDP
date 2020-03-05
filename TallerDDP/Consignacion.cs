@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TallerDDP
 {
-    public class Consignacion : Transancion
+    public class Consignacion : Transanccion
     {
         private string ciudadDestino { get; set; }
         private const double DESCUENTOCIUDADDESTINO = 10000;

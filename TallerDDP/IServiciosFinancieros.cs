@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TallerDDP
 {
-    public  interface IServicios
+    public  interface IServiciosFinancieros
     {
         public string Consignacion(Consignacion consignacion);
         public void Retiros(Retiro retiro);

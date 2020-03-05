@@ -6,8 +6,8 @@ namespace TallerDDP
 {
     public class ServiciosFinancieros
     {
-        public readonly IServicios servicios;
-        public ServiciosFinancieros(IServicios servicios) {
+        public readonly IServiciosFinancieros servicios;
+        public ServiciosFinancieros(IServiciosFinancieros servicios) {
             this.servicios = servicios;
         }
 
