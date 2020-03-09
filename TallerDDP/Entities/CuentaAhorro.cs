@@ -17,7 +17,7 @@ namespace EntidadFinanciera
 
         }
 
-        public void setPrimeraConsignacion(bool primeraConsignacion) { this._primeraConsignacion = primeraConsignacion; }
+        public void SetPrimeraConsignacion(bool primeraConsignacion) { this._primeraConsignacion = primeraConsignacion; }
 
         public string Consignar(Consignacion consignacion)
         {

@@ -11,7 +11,7 @@ namespace EntidadFinanciera
             this.servicios = servicios;
         }
 
-        public string Consignacion(Consignacion consignacion) {
+        public string Consignar(Consignacion consignacion) {
             return this.servicios.Consignar(consignacion);
         }
     }
