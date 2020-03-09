@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TallerDDP
+namespace EntidadFinanciera
 {
     public class ServiciosFinancieros
     {
@@ -12,7 +12,7 @@ namespace TallerDDP
         }
 
         public string Consignacion(Consignacion consignacion) {
-            return this.servicios.Consignacion(consignacion);
+            return this.servicios.Consignar(consignacion);
         }
     }
 }

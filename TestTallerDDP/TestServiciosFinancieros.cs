@@ -1,7 +1,6 @@
 using NUnit.Framework;
-using TallerDDP;
-
-namespace TestTallerDDP
+using EntidadFinanciera;
+namespace TestEntidadFinanciera
 {
     public class Tests
     {

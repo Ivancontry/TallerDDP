@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TallerDDP
+namespace EntidadFinanciera
 {
     public class CuentaAhorro : Cuenta, IServiciosFinancieros
     {
-        private bool primeraConsignacion;
+        private bool _primeraConsignacion;
 
         public CuentaAhorro(string nombreCuenta, string numeroCuenta, double saldo, string ciudad):base(nombreCuenta, numeroCuenta, saldo, ciudad) 
         {
@@ -17,19 +17,19 @@ namespace TallerDDP
 
         }
 
-        public void setPrimeraConsignacion(bool primeraConsignacion) { this.primeraConsignacion = primeraConsignacion; }
+        public void setPrimeraConsignacion(bool primeraConsignacion) { this._primeraConsignacion = primeraConsignacion; }
 
-        public string Consignacion(Consignacion consignacion)
+        public string Consignar(Consignacion consignacion)
         {
            
-            if (consignacion.getMonto() > 0)
+            if (consignacion.GetMonto() > 0)
             {
-                if (primeraConsignacion)
+                if (_primeraConsignacion)
                 {
-                    if (consignacion.getMonto() >= consignacion.getVALORCONSIGNACIONINICIAL())
+                    if (consignacion.GetMonto() >= consignacion.GetVALORCONSIGNACIONINICIAL())
                     {
                         ValidadCiudadDestino(consignacion);
-                        primeraConsignacion = true;
+                        _primeraConsignacion = true;
                     }
                     else
                     {                        
@@ -48,27 +48,27 @@ namespace TallerDDP
             }
             
             this.listaTransancion.Add(consignacion);
-            this.saldo += consignacion.getMonto();
+            this.saldo += consignacion.GetMonto();
             return "Su nuevo saldo es " + this.saldo + " m/c";
 
         }
 
         private void ValidadCiudadDestino(Consignacion consignacion)
         {
-            if (!consignacion.getCiudad().Equals(this.ciudad))
+            if (!consignacion.GetCiudad().Equals(this.ciudad))
             {
-                consignacion.setMonto(consignacion.getMonto() - consignacion.getDESCUENTOCIUDADDESTINO());
+                consignacion.SetMonto(consignacion.GetMonto() - consignacion.GetDESCUENTOCIUDADDESTINO());
                 this.listaTransancion.Add(consignacion);                           
 
             }
         }
 
-        public void Retiros(Retiro retiro)
+        public void Retirar(Retiro retiro)
         {
 
         }
 
-        public void TrasladoDinero(Trasnferencia trasnferencia)
+        public void TrasladarDinero(Trasnferencia trasnferencia)
         {
 
         }

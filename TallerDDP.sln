@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TallerDDP", "TallerDDP\TallerDDP.csproj", "{09325F9C-B0D6-4648-9B20-5943B8D25581}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntidadFinanciera", "TallerDDP\EntidadFinanciera.csproj", "{09325F9C-B0D6-4648-9B20-5943B8D25581}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTallerDDP", "TestTallerDDP\TestTallerDDP.csproj", "{ADD62191-74E9-4298-98D9-41E5157BCB88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestEntidadFinanciera", "TestTallerDDP\TestEntidadFinanciera.csproj", "{ADD62191-74E9-4298-98D9-41E5157BCB88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

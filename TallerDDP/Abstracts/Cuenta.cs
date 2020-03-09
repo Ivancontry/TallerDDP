@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TallerDDP
+namespace EntidadFinanciera
 {
-    public class Cuenta
+    public abstract class Cuenta
     {
         
         protected string nombreCuenta { get; set; }
         protected string numeroCuenta { get; set; }
         protected double saldo { get; set; }
         protected string ciudad { get; set; }
-        protected List<Transanccion> listaTransancion;
+        protected List<Transaccion> listaTransancion;
 
         public Cuenta(string nombreCuenta, string numeroCuenta, double saldo, string ciudad)
         {
@@ -19,11 +19,11 @@ namespace TallerDDP
             this.numeroCuenta = numeroCuenta;
             this.saldo = saldo;
             this.ciudad = ciudad;
-            this.listaTransancion = new List<Transanccion>();
+            this.listaTransancion = new List<Transaccion>();
         }
 
-        public int numeroTransaciones(Transanccion transancion) {
-            return this.listaTransancion.FindAll(x => x.GetType().IsAssignableFrom(transancion.GetType())).Count;           
+        public int NumeroTransaciones(Transaccion transanccion) {
+            return this.listaTransancion.FindAll(x => x.GetType().IsAssignableFrom(transanccion.GetType())).Count;           
 
         }
         

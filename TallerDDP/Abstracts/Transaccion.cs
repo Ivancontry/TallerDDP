@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TallerDDP
+namespace EntidadFinanciera
 {
-    public class Transanccion
+    public abstract class Transaccion
     {
         protected double monto { get; set; } 
         protected DateTime fecha { get; set; }
 
-        public Transanccion(double monto)
+        public Transaccion(double monto)
         {
             this.monto = monto;
             this.fecha = DateTime.Now;
